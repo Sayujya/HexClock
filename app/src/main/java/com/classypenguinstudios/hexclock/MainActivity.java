@@ -1,15 +1,12 @@
 package com.classypenguinstudios.hexclock;
 
-import android.animation.Animator;
 import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Gravity;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewAnimationUtils;
 import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -18,17 +15,15 @@ import android.widget.TextSwitcher;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
-import org.w3c.dom.Text;
-
 import java.util.Calendar;
 
 
 public class MainActivity extends Activity {
 
     private static long lastTime;
+    Thread updateTimer;
     private String[] textAbout = new String[]{" About HexClock \n", "HexClock was orignially written by Jacopo Colo \n The time is taken as hex color representation"};
     private boolean isClicked = false;
-    Thread updateTimer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +36,7 @@ public class MainActivity extends Activity {
         getActionBar().setElevation(0);
         getActionBar().setDisplayShowTitleEnabled(false);
 
-        final Typeface chamAndLimo = Typeface.createFromAsset(getAssets(), "chamandlimo.ttf");
+        final Typeface chamAndLimo = Typeface.createFromAsset(getAssets(), "chamandlimos.ttf");
 
         aboutTS.setFactory(new ViewSwitcher.ViewFactory() {
 
