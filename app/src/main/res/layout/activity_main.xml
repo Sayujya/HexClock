@@ -1,22 +1,72 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RLmain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/RLmain"
     tools:context=".MainActivity">
 
-    <TextSwitcher android:id="@+id/TStime"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"/>
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:clipChildren="false"
+        android:orientation="horizontal">
+
+        <com.github.adnansm.timelytextview.TimelyView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical" />
+
+        <com.github.adnansm.timelytextview.TimelyView
+            android:id="@+id/TTVdigit1"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical" />
+
+        <com.github.adnansm.timelytextview.TimelyView
+            android:id="@+id/TTVdigit2"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical" />
+
+        <com.github.adnansm.timelytextview.TimelyView
+            android:id="@+id/TTVdigit3"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical" />
+
+        <com.github.adnansm.timelytextview.TimelyView
+            android:id="@+id/TTVdigit4"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical" />
+
+        <com.github.adnansm.timelytextview.TimelyView
+            android:id="@+id/TTVdigit5"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical" />
+
+        <com.github.adnansm.timelytextview.TimelyView
+            android:id="@+id/TTVdigit6"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical" />
+
+        <com.github.adnansm.timelytextview.TimelyView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
 
     <TextSwitcher
         android:id="@+id/TSabout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:clickable="true"/>
+        android:layout_alignParentEnd="true"
+        android:clickable="true" />
 
 
 </RelativeLayout>
